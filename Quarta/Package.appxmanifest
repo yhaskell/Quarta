@@ -1,42 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-
-  <Identity Name="258c15a0-1a12-44be-8ecc-6fbb05e1112d"
-            Publisher="CN=Yohann"
-            Version="1.0.0.0" />
-
+  <Identity Name="5313yhaskell.Quarta" Publisher="CN=B22D01B8-4B82-488B-B53E-A3D02860AF1B" Version="1.0.0.0" />
   <Properties>
     <DisplayName>Quarta</DisplayName>
-    <PublisherDisplayName>Yohann</PublisherDisplayName>
+    <PublisherDisplayName>@yhaskell</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-
   <Prerequisites>
     <OSMinVersion>6.2.1</OSMinVersion>
     <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
   </Prerequisites>
-
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-        Executable="$targetnametoken$.exe"
-        EntryPoint="Quarta.App">
-        <VisualElements
-            DisplayName="Quarta"
-            Logo="Assets\Logo.png"
-            SmallLogo="Assets\SmallLogo.png"
-            Description="Quarta"
-            ForegroundText="light"
-            BackgroundColor="#464646">
-            <DefaultTile ShowName="allLogos" />
-            <SplashScreen Image="Assets\SplashScreen.png" />
-        </VisualElements>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Quarta.App">
+      <VisualElements DisplayName="Quarta" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="Quarta" ForegroundText="dark" BackgroundColor="#ffffff">
+        <DefaultTile ShowName="allLogos" />
+        <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#1C2649" />
+      </VisualElements>
     </Application>
   </Applications>
-  <Capabilities>
-    <Capability Name="internetClient" />
-  </Capabilities>
 </Package>

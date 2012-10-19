@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -20,9 +19,9 @@ namespace Quarta
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class MainPage : Quarta.Common.LayoutAwarePage
+    public sealed partial class Tutorial : Quarta.Common.LayoutAwarePage
     {
-        public MainPage()
+        public Tutorial()
         {
             this.InitializeComponent();
         }
@@ -48,28 +47,6 @@ namespace Quarta
         /// <param name="pageState">An empty dictionary to be populated with serializable state.</param>
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
-        }
-
-        private void PlayGeneral_Click(object sender, RoutedEventArgs e)
-        {
-           ApplicationData.Current.RoamingSettings.Values["type"] = "g";
-            Frame.Navigate(typeof(Play));
-        }
-
-        private void PlayTimed_Click(object sender, RoutedEventArgs e)
-        {
-           ApplicationData.Current.RoamingSettings.Values["type"] = "t";
-            Frame.Navigate(typeof(Play));
-        }
-
-        private void ChangeDifficulty_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(ChangeDifficulty));
-        }
-
-        private void Tutorial_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Tutorial));
         }
     }
 }
